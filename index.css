@@ -34,6 +34,7 @@ h1 {
 .task{
   color: #475569;
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
