@@ -1,0 +1,160 @@
+/* Reset CSS */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling Body & Layout Utama */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2b4a47; /* Warna latar yang lebih lembut di mata */
+    color: #00e9fe;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+/* Container Utama */
+.container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffffff;
+    color: #333333;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.judul {
+    font-size: 2rem;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.text {
+    color: #64748b;
+    font-size: 1rem;
+}
+
+/* Card Grid Layout */
+.card-grid {
+    display: grid;
+    /* Grid otomatis responsif */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Card Styling */
+.card {
+    background-color: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-color: #2563eb;
+}
+
+.card h3 {
+    color: #0f172a;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* Link Kontak */
+.contact-link {
+    display: inline-block;
+    color: #2563eb;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: #eff6ff;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+    word-break: break-word; /* Agar email panjang tidak meluap */
+}
+
+.contact-link:hover {
+    background-color: #dbeafe;
+}
+
+/* Tombol Back */
+.action-btn {
+    text-align: center;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #3b82f6;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-back:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.02);
+}
+
+/* Styling Navigasi Menu */
+.navbar {
+    margin-bottom: 2rem;
+}
+
+.link {
+    list-style: none; /* Menghilangkan tanda titik (bullet) bawaan <ul> */
+    display: flex; /* Menyusun menu sejajar ke samping */
+    justify-content: center; /* Memposisikan menu pas di tengah */
+    gap: 1.5rem; /* Jarak antar menu */
+    padding: 0;
+}
+
+.link-item a {
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    color: #64748b; /* Warna teks menu saat biasa */
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efek saat mouse mengarah ke menu */
+.link-item a:hover {
+    color: #2563eb;
+    background-color: #eff6ff;
+}
+
+/* Menandai halaman yang sedang aktif saat ini */
+.link-item.active a {
+    color: #ffffff;
+    background-color: #2563eb;
+}

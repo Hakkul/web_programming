@@ -9,7 +9,7 @@
 body {
   font-family: system-ui, -apple-system, sans-serif;
   color: #1e293b;
-  background-color: #1a52c2;
+  background-color: #f30000;
 }
 
 h1 {
@@ -69,7 +69,7 @@ h1 {
 }
 
 .kartu_1 {
-    background: linear-gradient(135deg, #bae6fd 0%, #1684f3 100%);
+    background: violet;
   border: 1px solid #bae6fd;
   border-radius: 12px;
   padding: 1.5rem;
@@ -77,7 +77,7 @@ h1 {
 }
 
 .kartu_2 {
-  background: linear-gradient(135deg, #bae6fd 0%, #1684f3 100%);
+  background: whitesmoke;
   border: 1px solid #7dd3fc;
   border-radius: 12px;
   padding: 1.5rem;
@@ -85,7 +85,7 @@ h1 {
 }
 
 .kartu_3 {
-    background: linear-gradient(135deg, #bae6fd 0%, #1684f3 100%);
+    background: yellowgreen;
 
   border: 1px solid #a5b4fc;
   border-radius: 12px;
