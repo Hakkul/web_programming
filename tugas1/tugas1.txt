@@ -1,1 +1,1 @@
-install vscode, node js, membuat akun github
+install vscode, node js, membuat akun github, dan lain lain
