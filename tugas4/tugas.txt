@@ -1,4 +1,0 @@
-• Buat skrip Node.js dengan nama tugas-es6.mjs.
-• Definisikan data array of objects berisi minimal 6 data transaksi belanja (id, barang, harga, qty, kategori).
-• Gunakan filter() untuk menyaring kategori tertentu, map() untuk menghitung subtotal tiap barang, dan reduce() untuk total keseluruhan.
-• Terapkan destructuring dan arrow functions pada seluruh fungsi pemrosesan data.
