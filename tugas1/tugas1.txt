@@ -1,1 +1,1 @@
-Insatall vscode, node, 
+Insatall vscode, node js
