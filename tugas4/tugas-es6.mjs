@@ -22,7 +22,6 @@ const totalMap = transaksi.map(({id, barang, qty, harga, katergori}) => ({
     hasil: qty * harga 
 }));
 
-
 const totaltransaksi = totalMap.reduce((x, { hasil }) => x + hasil, 0);
 
 
