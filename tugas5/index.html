@@ -10,9 +10,11 @@
 <body>
 
     <div class="container">
-        <h1>Search Profil GitHub</h1>
+        <div class="hide" id="missing-container">
+            <h1>Search Profil GitHub</h1>
         <!-- Img github -->
-        <div> <img src="assets/github.png" alt="img"></div>
+        <div> <img src="assets/img/github.png" alt="img"></div>
+             </div>
         <!-- Form Pencarian -->
         <form id="search-form">
             <input type="text" id="username-input" placeholder="Masukkan username GitHub..." autocomplete="off" required>
@@ -27,7 +29,7 @@
 
         <!-- card hasil profil -->
         <div id="profile-container" class="hidden">
-            <img id="profile-avatar" src="/" alt="Avatar">
+            <img id="profile-avatar" src="none" alt="Avatar">
             <h2 id="profile-name">profil github</h2>
             <p id="profile-username"></p>
             <p id="profile-bio"></p>
@@ -35,7 +37,7 @@
                 <span>Repositori Publik: <strong id="profile-repos"></strong></span>
             </div>
             <a id="profile-link" href="" target="_blank">Kunjungi Profil GitHub</a>
-            <button type="button" id="back-btn" class="back-button">Cari Profil Lain</button>
+            <button type="reset" id="back-btn" class="back-button">Cari Profil Lain</button>
         </div>
     </div>
 
