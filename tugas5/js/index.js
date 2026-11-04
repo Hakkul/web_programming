@@ -26,6 +26,7 @@ searchForm.addEventListener('submit', async (e) => {
     profileContainer.classList.add('hidden');
 
     try {
+        await new Promise(resolve => setTimeout(resolve, 2000));
         // Melakukan request ke API publik GitHub
         const response = await fetch(`https://api.github.com/users/${username}`);
 
@@ -53,8 +54,8 @@ searchForm.addEventListener('submit', async (e) => {
         profileContainer.classList.remove('hidden');
 
         // Menyembunyikan h1 dan form
-        searchForm.remove('hidden')
-        hilangkanh1.remove('hideden')
+        searchForm.style.display = 'none'
+        hilangkanh1.style.display = 'none'
 
     } catch (error) {
         // Menampilkan pesan error jika gagal / user tidak ditemukan
@@ -66,9 +67,12 @@ searchForm.addEventListener('submit', async (e) => {
     }
 });
 
-  back-btn.addEventListener('click', () => {
+  backBtn.addEventListener('click', () => {
+    console.log('Tombol berhasil di klik')
         profileContainer.classList.add('hidden')
         searchForm.classList.remove('hidden')
         usernameInput.value = ''
         usernameInput.focus()
+          searchForm.style.display = 'flex'
+        hilangkanh1.style.display = 'flex'
 });
