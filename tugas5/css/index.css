@@ -85,14 +85,6 @@ button:hover {
     font-weight: bold;
 }
 
-#error-container {
-    display: flex;
-    flex-direction: column; /* Menyusun ke bawah */
-    align-items: center;    /* Posisi di tengah secara horizontal */
-    gap: 15px;              /* Jarak spasi antar elemen */
-    text-align: center;
-}
-
 #profile-container {
     border-top: 1px solid #eee;
     padding-top: 20px;
