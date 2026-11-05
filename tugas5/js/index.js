@@ -6,7 +6,7 @@ const profileContainer = document.querySelector('#profile-container');
 const hilangkanh1 = document.querySelector('#missing-container')
 const backBtn = document.querySelector('#back-btn');
 const eror404 = document.querySelector('#img-erorr')
-
+const btneror = document.querySelector('#btn-erorr')
 
 // Elemen detail profil
 const profileAvatar = document.querySelector('#profile-avatar');
@@ -35,6 +35,7 @@ searchForm.addEventListener('submit', async (e) => {
         // Menangani kondisi jika user tidak ditemukan (Status 404)
         if (response.status === 404) {
             throw new Error("User tidak ditemukan!");
+    
         }
 
         // Menangani error lainnya
@@ -67,9 +68,22 @@ searchForm.addEventListener('submit', async (e) => {
         searchForm.style.display = 'none'
         hilangkanh1.style.display = 'none'
 
+        btneror.classList.remove('hidden')
+
+        btneror.addEventListener('click', () => {
+        // searchForm.classList.remove('hidden')
+        errorMessage.classList.remove('hidden')
+        eror404.classList.remove('hidden')
+        usernameInput.value = ''
+        usernameInput.focus()
+        searchForm.style.display = 'flex'
+        hilangkanh1.style.display = 'flex'
+        })
+
     } finally {
         // Sembunyikan loading setelah proses selesai (baik berhasil maupun gagal)
         loadingElement.classList.add('hidden');
+        
     }
 });
 
