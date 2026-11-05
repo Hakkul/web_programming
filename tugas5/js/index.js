@@ -67,13 +67,17 @@ searchForm.addEventListener('submit', async (e) => {
         eror404.classList.remove('hidden')
         searchForm.style.display = 'none'
         hilangkanh1.style.display = 'none'
+        // contaonerEror.classList.remove('hidden')
 
+        // menyebunyikan di tampilan awal
         btneror.classList.remove('hidden')
 
+        // aksi tombol ketika di klik
         btneror.addEventListener('click', () => {
-        // searchForm.classList.remove('hidden')
-        errorMessage.classList.remove('hidden')
-        eror404.classList.remove('hidden')
+        errorMessage.classList.add('hidden')
+        eror404.classList.add('hidden')
+        btneror.classList.add('hidden')
+        // contaonerEror.classList.add('hidden')
         usernameInput.value = ''
         usernameInput.focus()
         searchForm.style.display = 'flex'
