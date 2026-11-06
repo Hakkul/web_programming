@@ -73,6 +73,44 @@ button:hover {
     background-color: #3d99df;
 }
 
+/* Button untuk eror */
+.back_button {
+    display: block;
+    width: 100%;             
+    background-color: #0066ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-top: 10px;        
+}
+
+.back_button:hover {
+    background-color: #0052cc; 
+}
+
+#profile-link {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #0066ff; 
+    color: #ffffff;           
+    text-align: center;
+    text-decoration: none;     
+    border-radius: 8px;        
+    font-size: 14px;
+    font-weight: 600;
+    box-sizing: border-box;
+    transition: background 0.2s ease;
+}
+
+#profile-link:hover {
+    background-color: #0052cc; 
+}
+
 #loading {
     margin: 15px 0;
     color: #ff00ae;
@@ -119,8 +157,8 @@ button:hover {
 }
 
 .profile-joined-text {
-    font-size: 13px;
-    color: #e0e0e0;
+    font-size: 15px;
+    color: #000000;
     margin: 5px 0 10px 0;
 }
 
