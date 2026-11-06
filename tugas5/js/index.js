@@ -8,6 +8,9 @@ const backBtn = document.querySelector('#back-btn')
 const eror404 = document.querySelector('#img-erorr')
 const btneror = document.querySelector('#btn-erorr')
 const not_found = document.querySelector('#error-container')
+const join_github = document.querySelector('#profile-join')
+const followers = document.querySelector('#profile-followers')
+const following = document.querySelector('#profile-following')
 
 
 // Elemen detail profil
@@ -55,6 +58,18 @@ searchForm.addEventListener('submit', async (e) => {
         profileBio.textContent = data.bio ? data.bio : "Tidak ada bio yang tersedia.";
         profileRepos.textContent = data.public_repos;
         profileLink.href = data.html_url;
+
+        // mengambil data following dan followers dari API github
+        followers.textContent = data.followers
+        following.textContent = data.following
+
+        // Tanggal bergagung github
+        if (data.created_at ) {
+            const joinDate = new Date(data.created_at)
+            const opsi = { year: 'numeric', month: 'long', day: 'numeric' }
+
+            join_github.textContent = `Bergabung sejak ${joinDate.toLocaleDateString('id-ID', opsi)}`
+        }
 
         // Tampilkan kotak profil
         profileContainer.classList.remove('hidden');

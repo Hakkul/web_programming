@@ -94,57 +94,40 @@ button:hover {
     font-weight: bold;
 }
 
-#profile-container {
-    border-top: 1px solid #eee;
-    padding-top: 20px;
-    text-align: left;
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(2, 204, 255, 0.932);
+    padding: 12px;
+    border-radius: 10px;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    color: #000000;
+}
+
+.stat-item strong {
+    font-size: 16px;
+    margin-top: 4px;
+    color: #fff;
+}
+
+.profile-joined-text {
+    font-size: 13px;
+    color: #e0e0e0;
+    margin: 5px 0 10px 0;
 }
 
 #profile-avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    display: block;
+    width: 100px;          
+    height: 100px;          
+    object-fit: cover;      
+    border-radius: 50%;     
     margin: 0 auto 15px auto;
-    border: 2px solid #ddd;
-}
-
-#profile-name {
-    margin: 5px 0;
-    font-size: 20px;
-    color: #24292e;
-    text-align: center;
-}
-
-#profile-username {
-    color: #586069;
-    font-size: 14px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-#profile-bio {
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.profile-info {
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-#profile-link {
-    display: block;
-    text-align: center;
-    background-color: #0366d6;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-#profile-link:hover {
-    background-color: #005cc5;
 }

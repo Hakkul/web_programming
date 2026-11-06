@@ -23,25 +23,39 @@
 
         <div id="loading" class="hidden">Mencari username... Wait!</div>
 
-        <!-- WADAH KHUSUS ERROR (Default-nya disembunyikan pakai kelas hidden) -->
         <div id="error-container" class="hidden">
             <div id="error-message"></div>
             <img src="assets/img/notFoud.png" alt="username tidak ditemukan" id="img-erorr">
             <button type="button" id="btn-erorr" class="back-button">Cari Username Lain</button>
         </div>
 
-        <!-- card hasil profil -->
-        <div id="profile-container" class="hidden">
-            <img id="profile-avatar" src="none" alt="Avatar">
-            <h2 id="profile-name">profil github</h2>
-            <p id="profile-username">profile</p>
-            <p id="profile-bio"></p>
-            <div class="profile-info">
-                <span>Repositori Publik: <strong id="profile-repos"></strong></span>
+     <div id="profile-container" class="hidden">
+        <img id="profile-avatar" src="/" alt="Avatar">
+        <h2 id="profile-name">profil github</h2>
+        <p id="profile-username"></p>
+        <p id="profile-bio"></p>
+        <!-- Informasi Tanggal Bergabung -->
+        <p id="profile-join" class="profile-joined-text"></p>
+
+        <!-- Kotak Statistik (Repo, Followers, Following) -->
+        <div class="profile-stats">
+            <div class="stat-item">
+                <span>Repo</span>
+                <strong id="profile-repos">0</strong>
             </div>
-            <a id="profile-link" href="" target="_blank">Kunjungi Profil GitHub</a>
-            <button type="reset" id="back-btn" class="back-button">Cari github lain</button>
+            <div class="stat-item">
+                <span>Followers</span>
+                <strong id="profile-followers">0</strong>
+            </div>
+            <div class="stat-item">
+                <span>Following</span>
+                <strong id="profile-following">0</strong>
+            </div>
         </div>
+
+        <a id="profile-link" href="" target="_blank">Kunjungi Profil GitHub</a>
+        <button type="reset" id="back-btn" class="back-button">Cari github lain</button>
+    </div>
     </div>
 
     <script src="js/index.js"></script>
