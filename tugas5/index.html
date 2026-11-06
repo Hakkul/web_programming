@@ -21,18 +21,14 @@
             <button type="submit">Cari</button>
         </form>
 
-        <!-- bagian Loading -->
         <div id="loading" class="hidden">Mencari username... Wait!</div>
 
-        <!-- Pesan Error / User Tidak Ditemukan -->
-        <div id="error-message" class="hidden"></div>
-
-        <!-- Button khusus eror -->
-         <button type="reset" id="btn-erorr" class="hidden">Cari Username Lain</button>
-
-        <!-- img 404 -->
-
-        <img src="assets/img/notFoud.png" alt="username tidak ditemukan" class="hidden" id="img-erorr">
+        <!-- WADAH KHUSUS ERROR (Default-nya disembunyikan pakai kelas hidden) -->
+        <div id="error-container" class="hidden">
+            <div id="error-message"></div>
+            <img src="assets/img/notFoud.png" alt="username tidak ditemukan" id="img-erorr">
+            <button type="button" id="btn-erorr" class="back-button">Cari Username Lain</button>
+        </div>
 
         <!-- card hasil profil -->
         <div id="profile-container" class="hidden">

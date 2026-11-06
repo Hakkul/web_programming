@@ -79,10 +79,14 @@ button:hover {
     font-style: italic;
 }
 
-#error-message {
-    margin: 15px 0;
-    color: #d73a49;
-    font-weight: bold;
+/* Mengatur wadah atau elemen error agar tersusun rapi ke bawah */
+#error-container {
+    display: flex;
+    flex-direction: column; /* Menyusun elemen ke bawah */
+    align-items: center;    /* Posisi di tengah */
+    gap: 15px;              /* Jarak antar elemen */
+    text-align: center;
+    width: 100%;
 }
 
 #profile-container {

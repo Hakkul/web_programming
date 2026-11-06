@@ -81,7 +81,7 @@ searchForm.addEventListener('submit', async (e) => {
         usernameInput.value = ''
         usernameInput.focus()
         searchForm.style.display = 'flex'
-        hilangkanh1.style.display = 'flex'
+        hilangkanh1.style.display = 'block'
         })
 
     } finally {
@@ -98,6 +98,6 @@ searchForm.addEventListener('submit', async (e) => {
         usernameInput.value = ''
         usernameInput.focus()
         searchForm.style.display = 'flex'
-        hilangkanh1.style.display = 'flex'
+        hilangkanh1.style.display = 'block'
 });
 
