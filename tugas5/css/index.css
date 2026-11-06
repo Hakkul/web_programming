@@ -49,11 +49,11 @@ button {
 }
 
 button:hover {
-    background-color: #000000;
+    background-color: #0015ff;
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .back-button {
@@ -75,18 +75,23 @@ button:hover {
 
 #loading {
     margin: 15px 0;
-    color: #666;
+    color: #ff00ae;
     font-style: italic;
 }
 
-/* Mengatur wadah atau elemen error agar tersusun rapi ke bawah */
 #error-container {
     display: flex;
-    flex-direction: column; /* Menyusun elemen ke bawah */
-    align-items: center;    /* Posisi di tengah */
-    gap: 15px;              /* Jarak antar elemen */
+    flex-direction: column;
+    align-items: center;   
+    gap: 15px;             
     text-align: center;
     width: 100%;
+}
+
+#error-message {
+    margin: 15px 0;
+    color: #ff0019;
+    font-weight: bold;
 }
 
 #profile-container {
