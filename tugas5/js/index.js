@@ -109,7 +109,6 @@ searchForm.addEventListener('submit', async (e) => {
 });
 
   backBtn.addEventListener('click', () => {
-    console.log('Tombol berhasil di klik')
         profileContainer.classList.add('hidden')
         searchForm.classList.remove('hidden')
         usernameInput.value = ''
