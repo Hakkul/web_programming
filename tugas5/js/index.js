@@ -80,13 +80,12 @@ searchForm.addEventListener('submit', async (e) => {
 
     } catch (error) {
         // Menampilkan pesan error jika gagal / user tidak ditemukan
-        errorMessage.textContent = error.message;
+        errorMessage.textContent = 'Username tidak ditemukan';
         errorMessage.classList.remove('hidden');
         not_found.classList.remove('hidden')
         eror404.classList.remove('hidden')
         searchForm.style.display = 'none'
         hilangkanh1.style.display = 'none'
-        // contaonerEror.classList.remove('hidden')
 
         // menyebunyikan di tampilan awal
         btneror.classList.remove('hidden')
@@ -96,7 +95,6 @@ searchForm.addEventListener('submit', async (e) => {
         errorMessage.classList.add('hidden')
         eror404.classList.add('hidden')
         btneror.classList.add('hidden')
-        // contaonerEror.classList.add('hidden')
         usernameInput.value = ''
         usernameInput.focus()
         searchForm.style.display = 'flex'
@@ -104,7 +102,7 @@ searchForm.addEventListener('submit', async (e) => {
         })
 
     } finally {
-        // Sembunyikan loading setelah proses selesai (baik berhasil maupun gagal)
+        //Menyembunyikan efek loading gagal/berhasil
         loadingElement.classList.add('hidden');
         
     }
