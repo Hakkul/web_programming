@@ -31,7 +31,7 @@ searchForm.addEventListener('submit', async (e) => {
     loadingElement.classList.remove('hidden')
     errorMessage.classList.add('hidden')
     profileContainer.classList.add('hidden')
-    // not_found.classList.add('hidden')
+
 
     try {
         await new Promise(resolve => setTimeout(resolve, 2000))
