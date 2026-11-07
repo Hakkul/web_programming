@@ -11,6 +11,7 @@ const not_found = document.querySelector('#error-container')
 const join_github = document.querySelector('#profile-join')
 const followers = document.querySelector('#profile-followers')
 const following = document.querySelector('#profile-following')
+const searchHideen = document.querySelector('#search-hidden')
 
 
 // Elemen detail profil
@@ -31,6 +32,7 @@ searchForm.addEventListener('submit', async (e) => {
     loadingElement.classList.remove('hidden')
     errorMessage.classList.add('hidden')
     profileContainer.classList.add('hidden')
+    searchHideen.classList.remove('hidden')
 
 
     try {
@@ -103,7 +105,8 @@ searchForm.addEventListener('submit', async (e) => {
 
     } finally {
         //Menyembunyikan efek loading gagal/berhasil
-        loadingElement.classList.add('hidden');
+        loadingElement.classList.add('hidden')
+        searchHideen.classList.add('hidden')
         
     }
 });

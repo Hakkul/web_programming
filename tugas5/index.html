@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Profil Github</title>
     <link rel="stylesheet" href="css/index.css">
-    <link rel="shortcut icon" href="assets/favicon/search.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/favicon/icon.png" type="image/x-icon">
 </head>
 <body>
 
@@ -21,7 +21,11 @@
             <button type="submit">Cari</button>
         </form>
 
+        <!-- Loading -->
         <div id="loading" class="hidden">Mencari username... Wait!</div>
+        <div class="hidden" id="search-hidden">
+            <img src="assets/favicon/search.png" alt="seaech" class="search_hidden">
+        </div>
 
         <div id="error-container" class="hidden">
             <div id="error-message"></div>
