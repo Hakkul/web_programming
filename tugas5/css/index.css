@@ -38,6 +38,7 @@ h1 {
     font-size: 15px;
 }
 
+/* tombol untuk search */
 button {
     padding: 10px 15px;
     background-color: #2788ff;
@@ -49,13 +50,14 @@ button {
 }
 
 button:hover {
-    background-color: #0015ff;
+    background-color: #1c4d78;
 }
 
 .hidden {
     display: none !important;
 }
 
+/* tombol untuk search ketika berhasil */
 .back-button {
     display: block;
     width: 100%;
@@ -127,7 +129,6 @@ button:hover {
 }
 
 #error-message {
-    /* padding: 10px; */
     margin: 5px 0;
     color: #ff0019;
     font-weight: bold;
