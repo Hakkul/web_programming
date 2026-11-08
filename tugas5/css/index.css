@@ -127,8 +127,15 @@ button:hover {
 }
 
 #error-message {
-    margin: 15px 0;
+    /* padding: 10px; */
+    margin: 5px 0;
     color: #ff0019;
+    font-weight: bold;
+}
+
+#message-eror {
+    margin: 5px 0;
+    color: red;
     font-weight: bold;
 }
 

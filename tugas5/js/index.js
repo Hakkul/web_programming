@@ -12,6 +12,7 @@ const join_github = document.querySelector('#profile-join')
 const followers = document.querySelector('#profile-followers')
 const following = document.querySelector('#profile-following')
 const searchHideen = document.querySelector('#search-hidden')
+const erorrMessage2 = document.querySelector('#message-eror')
 
 
 // Elemen detail profil
@@ -31,6 +32,7 @@ searchForm.addEventListener('submit', async (e) => {
     // Reset tampilan & tampilkan indikator loading
     loadingElement.classList.remove('hidden')
     errorMessage.classList.add('hidden')
+    erorrMessage2.classList.add('hidden')
     profileContainer.classList.add('hidden')
     searchHideen.classList.remove('hidden')
 
@@ -82,8 +84,10 @@ searchForm.addEventListener('submit', async (e) => {
 
     } catch (error) {
         // Menampilkan pesan error jika gagal / user tidak ditemukan
-        errorMessage.textContent = 'Username tidak ditemukan';
+        errorMessage.textContent = 'Username tidak ditemukan'
+        erorrMessage2.textContent = '404 Not found'
         errorMessage.classList.remove('hidden');
+        erorrMessage2.classList.remove('hidden')
         not_found.classList.remove('hidden')
         eror404.classList.remove('hidden')
         searchForm.style.display = 'none'
@@ -95,6 +99,7 @@ searchForm.addEventListener('submit', async (e) => {
         // aksi tombol ketika di klik
         btneror.addEventListener('click', () => {
         errorMessage.classList.add('hidden')
+        erorrMessage2.classList.add('hidden')
         eror404.classList.add('hidden')
         btneror.classList.add('hidden')
         usernameInput.value = ''
