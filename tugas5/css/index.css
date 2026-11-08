@@ -177,14 +177,14 @@ button:hover {
 }
 
 .search_hidden {
-    width: 40px; /* Sesuaikan ukuran ikon pencarian */
+    width: 40px; /* Ukuran icon search */
     height: 40px;
-    animation: bounce 1s infinite alternate; /* Opsional: Efek memantul lucu saat loading */
+    animation: bounce 1s infinite alternate; /* Efek memantul saat loading */
     background: transparent;
     background-image: none;
 }
 
-/* Efek animasi memantul opsional */
+/* Animasi searching */
 @keyframes bounce {
     from { transform: translateY(0); }
     to { transform: translateY(-8px); }
