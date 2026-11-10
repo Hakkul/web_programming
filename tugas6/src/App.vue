@@ -8,19 +8,5 @@ const klik = ref('BukuCatatan')
 </script>
 
 <template>
-  <div style="padding: 15px">
-    <nav style="margin-bottom:20px">
-      <!-- <button class="button" @click="klik = 'HelloWorld'">home</button>
-      <button class="button" @click="klik = 'BukuCatatan'">Buku catatan</button> -->
-
-    </nav>
-
-  </div>
-
-  <div v-if="klik === 'HelloWorld'">
-  <!-- <HelloWorld /> -->
-  </div>
-<div v-if-else="klik === 'BukuCatatan'">
   <BukuCatatan />
-</div>
 </template>
