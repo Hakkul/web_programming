@@ -1,4 +1,7 @@
 <script setup> 
+// import './assets/css/buku.css'
+// Mengimpor file CSS dari folder terpisah
+import '../assets/css/buku.css';
 
 import { ref, computed} from 'vue';
 
@@ -32,41 +35,51 @@ const jumblahSelesai = computed(() => {
 
 
 <template>
-    <h1>ini buku catatan</h1>
-    <form @submit.prevent="tambahTugas">
-        <div>
-            <input v-model="newTugas" required placeholder="masukan judul buku">
-            <button>tambah judul</button>
-        </div>
-
-        <div>
-            <select v-model="kategori">
-                <option disabled value="">pilih kategori</option>
-
-                <option v-for="kat in Daftarkategori" :key="kat" :value="kat">
-                    {{ kat }}
-                </option>
-            </select>
-        </div>
-
-        <div>
-             <label>
-                <input type="checkbox" v-model="StatusBaca"> Sudah Dibaca
-            </label>
-        </div>
+    <div class="buku-container">
+        <h2>📚 Daftar Buku Catatanku</h2>
         
-        <ul>
-            <li v-for="item in tugas" :key="item.id" >
-               <strong> {{ item.text }} </strong>
-               - Kategori: {{ item.kategoriPilihan || '-' }}
-               - status: {{ item.sudahbaca  ? 'selesai' : 'belum' }}
+        <!-- Form Input -->
+        <form @submit.prevent="tambahTugas" class="form-card">
+            <div class="input-group">
+                <input v-model="newTugas" required placeholder="Masukkan judul buku...">
+            </div>
 
-            </li>
-        </ul>
-    </form>
+            <div class="input-group">
+                <select v-model="kategori">
+                    <option disabled value="">-- Pilih Kategori --</option>
+                    <option v-for="kat in Daftarkategori" :key="kat" :value="kat">
+                        {{ kat.toUpperCase() }}
+                    </option>
+                </select>
+            </div>
 
-    <div>
-        <p>Total buku selesai dibaca: {{ jumblahSelesai }}</p>
+            <div class="input-group checkbox-group">
+                 <label>
+                    <input type="checkbox" v-model="StatusBaca"> Sudah Dibaca
+                </label>
+            </div>
+
+            <button type="submit" class="btn-tambah">+ Tambah Buku</button>
+        </form>
+
+        <!-- Daftar Buku -->
+        <div class="list-section">
+            <h3>Daftar Koleksi Buku</h3>
+            <p class="stats">Total buku selesai dibaca: <strong>{{ jumlahSelesai }}</strong> dari {{ tugas.length }} buku</p>
+            
+            <ul class="buku-list">
+                <li v-for="item in tugas" :key="item.id" :class="{ 'selesai': item.sudahbaca }">
+                    <div class="info-buku">
+                        <span class="judul">{{ item.text }}</span>
+                        <span class="badge">{{ item.kategoriPilihan }}</span>
+                    </div>
+                    <span class="status-badge" :class="item.sudahbaca ? 'badge-sukses' : 'badge-belum'">
+                        {{ item.sudahbaca ? '✓ Selesai' : '⏳ Belum' }}
+                    </span>
+                </li>
+            </ul>
+
+            <p v-if="tugas.length === 0" class="empty-text">Belum ada buku dalam daftar.</p>
+        </div>
     </div>
-    
 </template>
