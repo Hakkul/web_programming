@@ -4,7 +4,7 @@ import { ref } from 'vue';
 import HelloWorld from './components/HelloWorld.vue'
 import BukuCatatan  from './components/BukuCatatan.vue';
 
-const klik = ref('default')
+const klik = ref('HelloWorld')
 </script>
 
 <template>
