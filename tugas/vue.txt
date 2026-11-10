@@ -1,0 +1,4 @@
+• Inisialisasi proyek baru menggunakan Vite dengan template Vue: npm create vite@latest praktikum-vue -- --template vue.
+• Jalankan development server lokal dengan npm run dev.
+• Buat komponen BukuCatatan.vue yang memiliki fitur input judul, kategori buku (select dropdown), dan status baca (checkbox).
+• Tampilkan daftar buku menggunakan v-for dan hitung jumlah buku yang sudah selesai dibaca menggunakan computed property.
