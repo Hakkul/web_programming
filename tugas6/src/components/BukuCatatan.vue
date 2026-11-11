@@ -65,7 +65,7 @@ const jumblahSelesai = computed(() => {
         <!-- Daftar Buku -->
         <div class="list-section">
             <h3>Daftar Koleksi Buku</h3>
-            <p class="stats">Total buku selesai dibaca: <strong>{{ jumlahSelesai }}</strong> dari {{ tugas.length }} buku</p>
+            <p class="stats">Total buku selesai dibaca: <strong>{{ jumblahSelesai }}</strong> dari {{ tugas.length }} buku</p>
             
             <ul class="buku-list">
                 <li v-for="item in tugas" :key="item.id" :class="{ 'selesai': item.sudahbaca }">
