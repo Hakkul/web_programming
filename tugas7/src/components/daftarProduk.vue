@@ -3,7 +3,7 @@
 import { ref } from 'vue';
 import ProdukCard from './ProdukCard.vue';
 import { useCardStore } from '../stores/cartStore';
-
+import '../assets/css/daftarProduk.css'
 
 const cardStore = useCardStore();
 

@@ -5,14 +5,14 @@ import cardView from '../components/cardView.vue'
 const routes = [
     {
         path: '/',
-        nama: 'Beranda',
-        Component: DaftarProduk
+        name: 'Beranda',
+        component: DaftarProduk
     },
 
     {
-        path: '/card',
-        nama: 'card',
-        Component: cardView
+        path: '/cart',
+        name: 'cart',
+        component: cardView
 
     }
 ]

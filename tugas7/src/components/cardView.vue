@@ -1,8 +1,9 @@
 <script setup>
-import { useCartStore } from '../stores/cartStore';
+// import { useCartStore } from '../stores/cartStore';
+import { useCardStore } from '../stores/cartStore';
 
 // Panggil store Pinia
-const cartStore = useCartStore();
+const cartStore = useCardStore();
 </script>
 
 <template>
