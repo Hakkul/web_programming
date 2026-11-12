@@ -2,10 +2,10 @@
 
 import { ref } from 'vue';
 import ProdukCard from './ProdukCard.vue';
-import { use_card_store } from '../stores/cartStore.js/index.js';
+import { useCardStore } from '../stores/cartStore';
 
 
-const card_store = use_card_store();
+const cardStore = useCardStore();
 
 const daftar_produk = ref([
     {id: 1, nama: 'buku_tulis', harga: 2000, Stok: 3},
@@ -15,7 +15,7 @@ const daftar_produk = ref([
 ])
 
 const handleBuyProduk = (produk_data) => {
-    card_store.tambahItem(produk_data)
+    cardStore.tambahItem(produk_data)
     
 }
 

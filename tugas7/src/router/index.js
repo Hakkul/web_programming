@@ -1,8 +1,8 @@
-import {createRouter, createwebhistory } from 'vue-router'
+import {createRouter, createWebHistory } from 'vue-router'
 import DaftarProduk from '../components/daftarProduk.vue'
 import cardView from '../components/cardView.vue'
 
-const route = [
+const routes = [
     {
         path: '/',
         nama: 'Beranda',
@@ -11,15 +11,15 @@ const route = [
 
     {
         path: '/card',
-        nama: 'Keranjag',
+        nama: 'card',
         Component: cardView
 
     }
 ]
 
 const router = createRouter({
-    history: createwebhistory(),
-    route
+    history: createWebHistory(),
+    routes
 })
 
 export default router
