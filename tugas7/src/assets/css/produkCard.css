@@ -1,0 +1,31 @@
+.produk-card:hover {
+    transform: translateY(-3px);
+}
+
+.produk-card h3 {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.produk-card .harga {
+    font-weight: bold;
+    color: #27ae60;
+    margin-bottom: 8px;
+}
+
+.produk-card button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.produk-card button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
