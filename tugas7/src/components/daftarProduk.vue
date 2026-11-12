@@ -14,6 +14,7 @@ const daftar_produk = ref([
 
 ])
 
+
 const handleBuyProduk = (produk_data) => {
     cardStore.tambahItem(produk_data)
     
@@ -33,7 +34,8 @@ const handleBuyProduk = (produk_data) => {
         :id="produk.id"
         :nama="produk.nama"
         :harga="produk.harga"
-        :stok="produk.stok"
+        :stok="produk.Stok"
+        :item.Stok--
         @beli_produk="handleBuyProduk"
         />
     </div>

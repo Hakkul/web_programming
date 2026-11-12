@@ -9,7 +9,7 @@ const props = defineProps({
     stok: {type: Number, default: 0}
 })
 
-const emit = defineEmits(["Beli_produk"])
+const emit = defineEmits(["Beli_produk", "produk"])
 
 const handleBeli = () => {
     if (props.stok > 0) {
