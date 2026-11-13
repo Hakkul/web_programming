@@ -1,6 +1,6 @@
 import {createRouter, createWebHistory } from 'vue-router'
 import DaftarProduk from '../components/daftarProduk.vue'
-import cardView from '../components/cardView.vue'
+import cardView from '../views/cardView.vue'
 
 const routes = [
     {

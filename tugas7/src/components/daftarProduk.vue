@@ -4,7 +4,6 @@ import { ref } from 'vue';
 import ProdukCard from './ProdukCard.vue';
 import { useCardStore } from '../stores/cartStore';
 import '../assets/css/daftarProduk.css'
-// import ''
 const cardStore = useCardStore();
 
 const daftarProduk = ref([
@@ -17,6 +16,13 @@ const daftarProduk = ref([
 
 
 const handleBuyProduk = (produk_data) => {
+  const produk = daftarProduk.value.find(p => p.id === produk_data.id)
+
+  if (produk && produk.Stok > 0) {
+    produk.Stok--
+  } else {
+    alert('stok habis')
+  }
     cardStore.tambahItem(produk_data)
     
 }
@@ -38,9 +44,9 @@ const handleBuyProduk = (produk_data) => {
         :id="item.id"
         :nama="item.nama"
         :harga="item.harga"
-        :stok="item.Stok"
+        :Stok="item.Stok"
         :gambar="item.gambar" 
-        @Beli_produk="handleBuyProduk"
+        @beli_produk="handleBuyProduk"
       />
     </div>
   </div>
