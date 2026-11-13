@@ -1,6 +1,6 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #a6d2ff;
+  background-color: rgb(251, 251, 251);
   margin: 0;
   padding: 0;
 }
@@ -10,10 +10,10 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  border: none; /* Menghilangkan segala bentuk garis hitam jika ada */
+  border: none;
 }
 .navbar {
-  background-color: #ffffff;
+  background-color: #015cf8;
   padding: 15px 30px;
   display: flex;
   justify-content: space-between;
@@ -23,7 +23,7 @@ body {
 
 .navbar h1 {
   font-size: 20px;
-  color: #1e293b;
+  color: #000000;
   margin: 0;
 }
 

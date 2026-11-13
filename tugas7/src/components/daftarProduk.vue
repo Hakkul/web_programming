@@ -8,10 +8,10 @@ import '../assets/css/daftarProduk.css'
 const cardStore = useCardStore();
 
 const daftarProduk = ref([
-    {id: 1, nama: 'buku_tulis', harga: 2000, Stok: 3, gambar: '/img/book.png'},
-    {id: 2, nama: 'buku_gambar', harga: 5000, Stok: 7, gambar: '/img/book.png'},
-    {id: 3, nama: 'buku_coding', harga: 7000, Stok: 9, gambar: '/img/book.png'},
-    {id: 4, nama: 'buku_mewarnai', harga: 6500, Stok: 6, gambar: '/img/book.png'}
+    {id: 1, nama: 'buku tulis', harga: 2000, Stok: 3, gambar: '/img/book.png'},
+    {id: 2, nama: 'buku gambar', harga: 5000, Stok: 7, gambar: '/img/book.png'},
+    {id: 3, nama: 'buku coding', harga: 7000, Stok: 9, gambar: '/img/book.png'},
+    {id: 4, nama: 'buku mewarnai', harga: 6500, Stok: 6, gambar: '/img/book.png'}
 
 ])
 
