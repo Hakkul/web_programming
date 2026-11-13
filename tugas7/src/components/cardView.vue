@@ -1,6 +1,7 @@
 <script setup>
 // import { useCartStore } from '../stores/cartStore';
 import { useCardStore } from '../stores/cartStore';
+import '../assets/css/cart.css'
 
 // Panggil store Pinia
 const cartStore = useCardStore();
@@ -24,22 +25,7 @@ const cartStore = useCardStore();
       </div>
 
       <hr />
-      <h3>Total Harga: Rp {{ cartStore.totalHarga }}</h3>
+      <h3>Total Harga: Rp {{ cartStore.total_harga.toLocaleString("id-ID") }}</h3>
     </div>
   </div>
 </template>
-
-<style scoped>
-.cart-container {
-  max-width: 10000px;
-  margin: 20px auto;
-  padding: 20px;
-}
-.cart-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
-}
-</style>
