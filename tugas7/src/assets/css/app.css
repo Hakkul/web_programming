@@ -5,6 +5,13 @@ body {
   padding: 0;
 }
 
+#app {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  border: none; /* Menghilangkan segala bentuk garis hitam jika ada */
+}
 .navbar {
   background-color: #ffffff;
   padding: 15px 30px;
