@@ -35,14 +35,13 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #64748b;
+  color: #000000;
   font-weight: 600;
   padding: 8px 12px;
   border-radius: 6px;
   transition: all 0.2s;
 }
 
-/* Style otomatis untuk rute yang sedang aktif */
 .nav-links a.router-link-active {
   color: #2563eb;
   background-color: #eff6ff;
