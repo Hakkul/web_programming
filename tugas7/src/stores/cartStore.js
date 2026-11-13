@@ -7,7 +7,7 @@ export const useCardStore = defineStore('card', () => {
 
         // Menghitung total jumlah barang
     const totalItem = computed (() => {
-        return items.value.reduce((total, item) => item.qty, 0)
+        return items.value.reduce((total, item) => total + item.qty, 0)
     })
     // Menghitung tottal harga keseluruhan
     const total_harga = computed(() => {

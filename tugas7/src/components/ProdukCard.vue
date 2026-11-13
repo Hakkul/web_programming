@@ -1,12 +1,13 @@
 <script setup>
 
-import '../assets/css/produkCard.css'
+import'../assets/css/produkCard.css'
 
 const props = defineProps({
     id: {type: Number, required: true},
     nama: {type: String, required: true},
     harga: {type: Number, required: true},
-    stok: {type: Number, default: 0}
+    stok: {type: Number, default: 0},
+    gambar: {type: String} // <-- Diperbaiki dari 'img' menjadi 'String'
 })
 
 const emit = defineEmits(["Beli_produk", "produk"])
@@ -21,13 +22,15 @@ const handleBeli = () => {
 
 <template>
     <div class="produk-card">
-     <h3> {{ nama }}</h3>   
-     <p class="price">Rp {{ harga.toLocaleString("id-ID") }}</p>
-     <p :class="{habis:stok === 0}">
-        Stok: {{ stok > 0 ? stok: 'habis' }}</p>
+        <img :src="gambar" alt="Foto Buku" class="product-img" />
+        <h3 class="nama-produk">{{ nama }}</h3>   
+        <p class="harga-produk">Rp {{ harga.toLocaleString("id-ID") }}</p>
+        <p class="stok-produk" :class="{habis: stok === 0}">
+            Stok: {{ stok > 0 ? stok : 'habis' }}
+        </p>
 
-     <button @click="handleBeli" :disabled="stok === 0"> 
-         {{ stok > 0  ? '+ keranjang' : 'Stok kosong' }}
-     </button>
+        <button @click="handleBeli" :disabled="stok === 0" class="button-cart"> 
+            {{ stok > 0 ? '+ keranjang' : 'Stok kosong' }}
+        </button>
     </div>
 </template>

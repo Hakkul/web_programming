@@ -1,31 +1,57 @@
-.produk-card:hover {
-    transform: translateY(-3px);
+.product-card {
+  background: #ffffff; /* Latar belakang putih agar kontras dengan background biru */
+  border: 1px solid #ddd;
+  border-radius: 12px; /* Sudut melengkung */
+  padding: 20px;
+  text-align: center; /* Membuat teks di dalam card rata tengah */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Efek bayangan tipis */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.produk-card h3 {
-    font-size: 18px;
-    color: #2c3e50;
-    margin-bottom: 10px;
+.product-img {
+  width: 100px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
 }
 
-.produk-card .harga {
-    font-weight: bold;
-    color: #27ae60;
-    margin-bottom: 8px;
+.nama-produk {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
 }
 
-.produk-card button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-top: 10px;
+.harga-produk {
+  color: #2b6cb0;
+  font-weight: 600;
+  margin-bottom: 4px;
 }
 
-.produk-card button:disabled {
-    background-color: #95a5a6;
-    cursor: not-allowed;
+.stok-produk {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.button-cart {
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-cart:hover {
+  background-color: #2b6cb0;
+}
+
+.btn-cart:disabled {
+  background-color: #cbd5e0;
+  cursor: not-allowed;
 }

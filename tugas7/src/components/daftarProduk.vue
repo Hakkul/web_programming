@@ -4,13 +4,14 @@ import { ref } from 'vue';
 import ProdukCard from './ProdukCard.vue';
 import { useCardStore } from '../stores/cartStore';
 import '../assets/css/daftarProduk.css'
-
+// import ''
 const cardStore = useCardStore();
 
-const daftar_produk = ref([
-    {id: 1, nama: 'buku_tulis', harga: 2000, Stok: 3},
-    {id: 2, nama: 'buku_gambar', harga: 5000, Stok: 7},
-    {id: 3, nama: 'buku_coding', harga: 7000, Stok: 9},
+const daftarProduk = ref([
+    {id: 1, nama: 'buku_tulis', harga: 2000, Stok: 3, gambar: '/img/book.png'},
+    {id: 2, nama: 'buku_gambar', harga: 5000, Stok: 7, gambar: '/img/book.png'},
+    {id: 3, nama: 'buku_coding', harga: 7000, Stok: 9, gambar: '/img/book.png'},
+    {id: 4, nama: 'buku_mewarnai', harga: 6500, Stok: 6, gambar: '/img/book.png'}
 
 ])
 
@@ -23,21 +24,24 @@ const handleBuyProduk = (produk_data) => {
 </script>
 
 <template>
-    <div class="daftar-produk-container">
-        <h2>Katalog baru</h2>
-        <p>Silahkan pilih buku yang anda inginkan</p>
+  <div class="daftar-produk-container">
+    <h2>Katalog baru</h2>
+    <p>Silahkan pilih buku yang anda inginkan</p>
+    
 
     <div class="produk-grid">
-        <ProdukCard 
-        v-for="produk in daftar_produk"
-        :key="produk.id"
-        :id="produk.id"
-        :nama="produk.nama"
-        :harga="produk.harga"
-        :stok="produk.Stok"
-        :item.Stok--
-        @beli_produk="handleBuyProduk"
-        />
+
+      <!-- Perhatikan kata 'item' di bawah ini -->
+      <ProdukCard 
+        v-for="item in daftarProduk" 
+        :key="item.id"
+        :id="item.id"
+        :nama="item.nama"
+        :harga="item.harga"
+        :stok="item.Stok"
+        :gambar="item.gambar" 
+        @Beli_produk="handleBuyProduk"
+      />
     </div>
-    </div>
+  </div>
 </template>

@@ -31,7 +31,7 @@ const cartStore = useCardStore();
 
 <style scoped>
 .cart-container {
-  max-width: 600px;
+  max-width: 10000px;
   margin: 20px auto;
   padding: 20px;
 }
