@@ -7,10 +7,12 @@ import '../assets/css/daftarProduk.css'
 const cardStore = useCardStore();
 
 const daftarProduk = ref([
-    {id: 1, nama: 'buku tulis', harga: 2000, Stok: 3, gambar: '/img/book.png'},
-    {id: 2, nama: 'buku gambar', harga: 5000, Stok: 7, gambar: '/img/book.png'},
+    {id: 1, nama: 'buku tulis', harga: 2000, Stok: 3, gambar: '/img/buku_tulis.jpeg'},
+    {id: 2, nama: 'buku gambar', harga: 5000, Stok: 7, gambar: '/img/buku_gambar.jpeg'},
     {id: 3, nama: 'buku coding', harga: 7000, Stok: 9, gambar: '/img/book.png'},
-    {id: 4, nama: 'buku mewarnai', harga: 6500, Stok: 6, gambar: '/img/book.png'}
+    {id: 4, nama: 'buku mewarnai', harga: 6500, Stok: 6, gambar: '/img/buku_warna.jpeg'},
+    {id: 5, nama: 'buku horor', harga: 5000, Stok: 5, gambar: '/img/horor.jpeg'}
+
 
 ])
 
@@ -37,7 +39,6 @@ const handleBuyProduk = (produk_data) => {
 
     <div class="produk-grid">
 
-      <!-- Perhatikan kata 'item' di bawah ini -->
       <ProdukCard 
         v-for="item in daftarProduk" 
         :key="item.id"
