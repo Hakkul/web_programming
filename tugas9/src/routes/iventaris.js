@@ -31,5 +31,14 @@ iventaris.get('/:id', (info) => {
     })
 })
 
+iventaris.post ('/', async (info) => {
+    const tambah = await info.req.json()
+    const respon = {...tambah}
+
+    DataIventaris.push(respon)
+
+    return info.json(respon)
+})
+
 
 export default iventaris
