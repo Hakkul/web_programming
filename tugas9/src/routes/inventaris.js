@@ -21,12 +21,12 @@ iventaris.get('/:id', (info) => {
 
     if (!barang) {
         return info.json({ 
-        Status: 'eror bos', 
+        Status: 'eror', 
         Message: `Barang dengan id ${id} tidak ada`}, 404)
     }
 
     return info.json({
-        Status: 'Succes bos',
+        Status: 'Succes',
         data: barang
     })
 })

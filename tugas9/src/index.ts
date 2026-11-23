@@ -1,6 +1,6 @@
 import { Hono } from 'hono'
 // @ts-ignore
-import iventarisBarang from './routes/iventaris.js'
+// import inventarisBarang from './routes/inventaris.js'
 
 const app = new Hono()
 
@@ -8,7 +8,8 @@ app.get('/', (c) => {
   return c.text('API aktif')
 })
 
-app.route('/api/iventaris', iventarisBarang)
+// app.route('/api/inventaris', inventarisBarang)
+
 
 
 export default app
