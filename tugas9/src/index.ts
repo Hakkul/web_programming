@@ -1,20 +1,14 @@
 import { Hono } from 'hono'
+// @ts-ignore
+import iventarisBarang from './routes/iventaris.js'
 
 const app = new Hono()
 
 app.get('/', (c) => {
-  return c.text('Hello Hono!')
+  return c.text('API aktif')
 })
 
-app.get('/tes', (info) => {
-  return info.text('API info aktiv')
-})
+app.route('/api/iventaris', iventarisBarang)
 
-app.get('/json', (info) => {
-  return info.json({
-    "message" : "True",
-    "keaadan" : "API dari json"
-  })
-})
 
 export default app
