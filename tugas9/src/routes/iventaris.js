@@ -9,7 +9,7 @@ const DataIventaris = [
     {id: 4, nama: "Router", Jumlah: 7, kondisi: "Baik"},
 ]
 
-//M enampilkan semua data iventaris
+// Menampilkan semua data iventaris
 iventaris.get('/', (info) => {
     return info.json({ DataIventaris })
 })
@@ -26,7 +26,7 @@ iventaris.get('/:id', (info) => {
     }
 
     return info.json({
-        // Status: 'Succes bos',
+        Status: 'Succes bos',
         data: barang
     })
 })
