@@ -9,11 +9,27 @@ const DataIventaris = [
     {id: 4, nama: "Router", Jumlah: 7, kondisi: "Baik"},
 ]
 
-//Menampilkan semua data iventaris
+//M enampilkan semua data iventaris
 iventaris.get('/', (info) => {
     return info.json({ DataIventaris })
 })
 
+// Memangiil data iventarsis sesuai ID
+iventaris.get('/:id', (info) => {
+    const id = Number(info.req.param('id'))
+    const barang = DataIventaris.find((item) => item.id === id)
+
+    if (!barang) {
+        return info.json({ 
+        Status: 'eror bos', 
+        Message: `Barang dengan id ${id} tidak ada`}, 404)
+    }
+
+    return info.json({
+        // Status: 'Succes bos',
+        data: barang
+    })
+})
 
 
 export default iventaris
