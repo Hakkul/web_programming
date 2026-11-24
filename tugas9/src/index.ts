@@ -1,8 +1,8 @@
 import { Hono } from 'hono'
 
-
 const app = new Hono()
 
+// variable untuk menyimpan data inventaris
 const inventaris = [
   {id: 1, nama: "Komputer"},
   {id: 2, nama: "proyektor"},
