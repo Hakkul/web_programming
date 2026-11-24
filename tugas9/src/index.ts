@@ -34,6 +34,11 @@ app.get('/api/inventaris/:id', (c) => {
   })
 })
 
+app.post('/api/inventaris', async (c) => {
+  const tambah = await c.req.json()
+  const respon = {...tambah}
 
+  return c.json(respon)
+})
 
 export default app
