@@ -1,0 +1,15 @@
+GET http://localhost:8787/
+
+###
+
+GET http://localhost:8787/api/inventaris/1
+
+###
+
+POST http://localhost:8787/api/inventaris
+Content-Type: application/json
+
+{
+  "id": 5,
+  "nama": "Laptop"
+}
