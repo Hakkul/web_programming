@@ -10,14 +10,17 @@ const inventaris = [
   {id: 4, nama: "Router"}
 ]
 
+// Start API
 app.get('/', (c) => {
   return c.text('Server API aktif')
 })
 
+// Menampilkan seluruh data inventaris
 app.get('/api/inventaris', (c) => {
   return c.json({ inventaris })
 })
 
+// Menampilkan data inventaris berdasarkan id
 app.get('/api/inventaris/:id', (c) => {
   const id = Number(c.req.param('id'))
   const IdBarang = inventaris.find((item) => item.id === id)
@@ -34,6 +37,7 @@ app.get('/api/inventaris/:id', (c) => {
   })
 })
 
+// Menambah data inventaris
 app.post('/api/inventaris', async (c) => {
   const tambah = await c.req.json()
   const respon = {...tambah}
